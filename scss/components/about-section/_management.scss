@@ -1,0 +1,94 @@
+.management {
+  position: relative;
+
+  @include background-image('&__img');
+
+  &__container {
+    padding: 0 2rem;
+    margin: auto;
+  }
+
+  &__img img {
+    opacity: .15;
+  }
+
+  &__title {
+    color: var(--secondary-color);
+    padding-bottom: 2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: .25rem;
+      margin: 0 auto;
+      margin-top: .5rem;
+      background: var(--primary-color);
+    }
+  }
+
+  &__card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: .625rem;
+    min-height: px-rem(350px);
+    position: relative;
+
+    @include box-shadow;
+  }
+
+  $card-img-size: px-rem(200px);
+
+  &__card-img {
+    position: absolute;
+    top: -1.5rem;
+    left: 1rem;
+    overflow: hidden;
+    width: px-rem(150px);
+    height: $card-img-size;
+    border-radius: .625rem;
+    @include box-shadow;
+  }
+
+  &__card-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: var(--secondary-color);
+    padding: 1em;
+    border-radius: px-rem(100px);
+
+    &:hover {
+      background: #0A66C2;
+    }
+
+    img {
+      margin-left: .1rem;
+      @include square($size: px-rem(20px));
+    }
+  }
+
+  &__card-content {
+    padding-top: $card-img-size / 1.5;
+  }
+
+  &__card-title {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: .25rem;
+      margin-top: .5rem;
+      background: var(--primary-color);
+    }
+  }
+
+  &__card-description {
+    line-height: 1.5;
+    color: var(--text-emphasis-medium);
+    font-weight: var(--fw-medium);
+  }
+}

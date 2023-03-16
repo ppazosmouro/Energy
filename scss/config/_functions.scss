@@ -1,0 +1,7 @@
+@function px-rem($px) {
+    @return $px / $default-fz * 1rem;
+}
+
+@function px-em($px, $context-fz: $default-fz) {
+    @return $px / $context-fz * 1em;
+}

@@ -1,0 +1,86 @@
+.fz-h1 {
+  font-size: var(--fz-h1);
+}
+
+.fz-h2 {
+  font-size: var(--fz-h2);
+}
+
+.fz-h3 {
+  font-size: var(--fz-h3);
+}
+
+.fz-body {
+  font-size: var(--fz-body);
+}
+
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fz-small {
+  font-size: var(--fz-small);
+}
+
+.bg-primary {
+  background: var(--primary-color);
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.text-accent-red {
+  color: var(--accent-red);
+}
+
+.text-emphasis {
+  &-high {
+    color: var(--text-emphasis-high);
+  }
+
+  &-medium {
+    color: var(--text-emphasis-medium);
+  }
+
+  &-disabled {
+    color: var(--text-emphasis-disabled);
+  }
+}
+
+.bg-light {
+  background: var(--background);
+}
+
+.bg-grey {
+  background: var(--background-grey);
+}
+
+.bg-dark-grey {
+  background: var(--background-dark-grey);
+}
+
+.anchor {
+  color: var(--third-color) !important;
+  text-decoration: underline;
+}
+
+.br-radius {
+  border-radius: .625rem;
+}
+
+.box-shadow {
+  @include box-shadow;
+}

@@ -1,0 +1,15 @@
+$alert-transparency-percent: .10;
+
+.alert {
+  padding: 1rem;
+  background: rgba(#25944e, $alert-transparency-percent);
+  border: 1px solid var(--primary-color);
+  border-radius: .25rem;
+  color: var(--dark);
+  margin: .5rem 0;
+
+  &--danger {
+    background: rgba(#fff45e, $alert-transparency-percent);
+    border: 1px solid var(--secondary-color);
+  }
+}

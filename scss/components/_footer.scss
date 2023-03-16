@@ -1,0 +1,140 @@
+$footer-breakpoint: 768px;
+$footer-spacing: 2rem;
+
+.footer {
+  background: #f1f1f1;
+  padding-top: $footer-spacing;
+
+  &__group {
+    max-width: px-rem(300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include mq($footer-breakpoint) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    height: var(-header-height);
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include mq($footer-breakpoint) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 1rem;
+
+    @include mq($footer-breakpoint) {
+      margin: 0;
+    }
+  }
+
+  &__menu-title {
+    font-size: 1.3em;
+    color: var(--third-color);
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include mq($footer-breakpoint) {
+      text-align: left;
+    }
+  }
+
+  &__nav .menu {
+    margin: 0;
+    text-align: center;
+    @include mq($footer-breakpoint) {
+      text-align: left;
+    }
+  }
+
+  &__nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav a {
+    color: var(--text-emphasis-medium);
+    font-size: 1.2em;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq($footer-breakpoint) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.copyright {
+  padding: $footer-spacing 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+  margin-top: 2rem;
+
+  @include mq($footer-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    text-align: center;
+
+    @include mq($footer-breakpoint) {
+      margin: 0;
+    }
+  }
+
+  &__nav {
+
+  }
+
+  &__nav .menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__nav .menu li + li::before {
+    content: '|';
+    text-align: center;
+    margin: 0 .5rem;
+  }
+
+  &__nav .menu a {
+    color: var(--text-emphasis-disabled);
+    text-align: center;
+
+    @include mq($footer-breakpoint) {
+      text-align: left;
+    }
+  }
+}

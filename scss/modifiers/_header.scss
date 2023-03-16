@@ -1,0 +1,113 @@
+// Header scroll modifier
+$header-scroll-selector: '.header--scroll';
+
+#{$header-scroll-selector} .logo__text {
+    color: var(--third-color);
+    font-size: 2.8em;
+}
+
+#{$header-scroll-selector} .logo__img {
+  max-height: calc( var(--header-height) - 1rem );
+}
+
+#{$header-scroll-selector} .nav ul li a {
+  color: var(--text-emphasis-high);
+  @include mq(md) {
+    font-size: 1.25em;
+  }
+}
+
+#{$header-scroll-selector} .menu-btn .menu-btn__burger {
+  background: $text-emphasis-high;
+}
+
+#{$header-scroll-selector} .menu-btn .menu-btn__burger:before,
+#{$header-scroll-selector} .menu-btn .menu-btn__burger:after {
+  background: $text-emphasis-high;
+}
+
+#{$header-scroll-selector} .menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+
+#{$header-scroll-selector} .nav .main-nav .dropdown:after {
+  border-top: .7rem solid var(--text-emphasis-disabled);
+}
+
+#{$header-scroll-selector} .nav .main-nav li.current_page_item.dropdown:after {
+    border-top: .7rem solid var(--primary-color);
+}
+
+header:not(#{$header-scroll-selector}) .nav.open ul li a {
+  color: var(--text-emphasis-high);
+}
+
+header:not(#{$header-scroll-selector}) .menu-btn.open .menu-btn__burger {
+  background: $text-emphasis-high;
+}
+
+header:not(#{$header-scroll-selector}) .menu-btn.open .menu-btn__burger:before,
+header:not(#{$header-scroll-selector}) .menu-btn.open .menu-btn__burger:after {
+  background: $text-emphasis-high;
+}
+
+header:not(#{$header-scroll-selector}) .menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+
+// Header sticky modifier
+$header-sticky-selector: '.header--sticky';
+#{$header-sticky-selector} .logo__text {
+    color: var(--third-color);
+    font-size: 2.8em;
+}
+
+#{$header-sticky-selector} .logo__img {
+  max-height: calc( var(--header-height) - 1rem );
+}
+
+#{$header-sticky-selector} .nav ul li a {
+  color: var(--text-emphasis-high);
+  @include mq(md) {
+    font-size: 1.25em;
+  }
+}
+
+#{$header-sticky-selector} .menu-btn .menu-btn__burger {
+  background: $text-emphasis-high;
+}
+
+#{$header-sticky-selector} .menu-btn .menu-btn__burger:before,
+#{$header-sticky-selector} .menu-btn .menu-btn__burger:after {
+  background: $text-emphasis-high;
+}
+
+#{$header-sticky-selector} .menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+
+#{$header-sticky-selector} .nav .main-nav .dropdown:after {
+  border-top: .7rem solid var(--text-emphasis-disabled);
+}
+
+#{$header-sticky-selector} .nav .main-nav li.current_page_item.dropdown:after {
+    border-top: .7rem solid var(--primary-color);
+}
+
+header:not(#{$header-sticky-selector}) .nav.open ul li a {
+  color: var(--text-emphasis-high);
+}
+
+header:not(#{$header-sticky-selector}) .menu-btn.open .menu-btn__burger {
+  background: $text-emphasis-high;
+}
+
+header:not(#{$header-sticky-selector}) .menu-btn.open .menu-btn__burger:before,
+header:not(#{$header-sticky-selector}) .menu-btn.open .menu-btn__burger:after {
+  background: $text-emphasis-high;
+}
+
+header:not(#{$header-sticky-selector}) .menu-btn.open .menu-btn__burger {
+  background: transparent;
+}
+

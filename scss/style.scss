@@ -1,0 +1,58 @@
+/*!
+Theme Name: CM Renergy
+Theme URI: https://creativamotion.com
+Author: Creativa Motion
+Author URI: https://creativamotion.com/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: renergy
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+// Config files
+@import "config/variables";
+@import "config/functions";
+@import "config/mixins";
+
+// Base styles
+@import "base/base";
+
+// Layout styles
+@import "layout/layout";
+@import "layout/grid-system";
+
+// Theme
+@import "theme/theme";
+
+// Components
+@import "components/header";
+@import "components/logo";
+@import "components/menu";
+@import "components/burger-menu";
+@import "components/button";
+@import "components/form";
+@import "components/alert";
+@import "components/social-links";
+@import "components/contact-item";
+@import "components/footer";
+
+// Section components
+@import "components/global-section/hero";
+@import "components/global-section/what-we-do";
+@import "components/global-section/projects";
+@import "components/home-section/stats";
+@import "components/home-section/club";
+@import "components/home-section/cards";
+@import "components/about-section/about";
+@import "components/about-section/management";
+@import "components/sustainability-section/sustainability";
+@import "components/contact-section/contact";
+
+// Modifiers
+@import "modifiers/header";
+@import "modifiers/footer";
+@import "modifiers/_contact-2-form";

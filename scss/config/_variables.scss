@@ -1,0 +1,86 @@
+$max-width    : 1440px;
+$default-fz   : 16px;
+$border-radius: .25rem;
+$columns      : 12;
+
+//Breakpoints
+$breakpoints: (sm: 600px,
+  md: 960px,
+  lg: 1024px,
+  xl: 1280px);
+
+// Colors in SCSS Syntax
+$background            : #fff;
+$background-grey       : #f2f2f2;
+$background-dark-grey  : #ececec;
+$primary-color         : #ff921e;
+$third-color           : #2685ac;
+$secondary-color       : #155974;
+$accent-red            : #F3192C;
+$accent-green          : #25944e;
+$accent-blue           : #00a9ff;
+$surface-high          : #fff;
+$dark                  : #606060;
+$surface-medium        : rgba(0, 0, 0, 5%);
+$surface-low           : rgba(0, 0, 0, 4%);
+$text-emphasis-disabled: rgba(0, 0, 0, 38%);
+$text-emphasis-medium  : rgba(0, 0, 0, 60%);
+$text-emphasis-high    : rgba(0, 0, 0, 87%);
+$image-filter-solid: #0c1b3e;
+$image-filter-transparent: rgba($image-filter-solid, .9);
+
+:root {
+  //Layout
+  --header-height: 4.5rem;
+  --grid-gap     : 1rem;
+
+  // Fonts
+  --primary-font: 'Inter', sans-serif;
+  --secondary-font: 'Fira Sans', sans-serif;
+
+  //Colors
+  --background            : #fff;
+  --background-grey       : #f2f2f2;
+  --background-dark-grey  : #ececec;
+  --primary-color         : #ff921e;
+  --third-color           : #2685ac;
+  --secondary-color       : #155974;
+  --accent-red            : #F3192C;
+  --accent-green          : #25944e;
+  --accent-blue           : #00a9ff;
+  --surface-high          : #fff;
+  --dark                  : #606060;
+  --surface-medium        : rgba(0, 0, 0, 5%);
+  --surface-low           : rgba(0, 0, 0, 4%);
+  --text-emphasis-disabled: rgba(0, 0, 0, 38%);
+  --text-emphasis-medium  : rgba(0, 0, 0, 60%);
+  --text-emphasis-high    : rgba(0, 0, 0, 87%);
+
+  //Z-indexs
+  --z-back   : -10;
+  --z-normal : 1;
+  --z-tooltip: 10;
+  --z-fixed  : 100;
+  --z-modal  : 1000;
+
+  //Font sizes
+  --fz-h1   : 2rem;
+  --fz-h2   : 1.5rem;
+  --fz-h3   : 1.25rem;
+  --fz-body : 1rem;
+  --fz-small: .75rem;
+
+  @media screen and (min-width: map-get($breakpoints, sm)) {
+    --fz-h1   : 2.5rem;
+    --fz-h2   : 2rem;
+    --fz-h3   : 1.5rem;
+    --fz-body : 1rem;
+    --fz-small: .75rem;
+  }
+
+  //Font weight
+  --fw-light  : 300;
+  --fw-regular: 400;
+  --fw-medium : 500;
+  --fw-bold   : 700;
+}

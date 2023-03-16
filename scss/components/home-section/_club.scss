@@ -1,0 +1,101 @@
+.club {
+  min-height: px-rem(400px);
+  position: relative;
+
+  @include background-image('&__img', $image-filter-transparent);
+
+  &__quote {
+    color: #fff;
+    font-family: var(--secondary-font);
+  }
+
+  &__content {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+
+  &__join {
+    background: #fff;
+    border-radius: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: -3rem;
+    overflow: hidden;
+    display: flex;
+    @include box-shadow;
+
+    @include mq(sm) {
+      max-height: px-rem(220px);
+    }
+
+
+
+    &-img {
+      display: none;
+
+      & img {
+        width: 100%;
+      }
+
+      @include mq(sm) {
+        width: 40%;
+        display: block;
+      }
+    }
+
+    &-content {
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      @include mq(sm) {
+        width: 60%;
+      }
+
+      @include mq(md) {
+        flex-direction: row
+      }
+    }
+
+    &-title {
+      width: 100%;
+      color: var(--secondary-color);
+      font-size: 1.6em;
+      margin-top: 0;
+      text-align: center;
+
+      @include mq(sm) {
+        text-align: left;
+      }
+
+      @include mq(md) {
+        margin: 0;
+        padding-right: 3rem;
+        width: 60%;
+      }
+
+      @include mq(lg) {
+        width: 70%;
+      }
+    }
+
+    .button {
+      width: 100%;
+      text-align: center;
+      padding: 1rem .5rem;
+      border-radius: 0.625rem;
+      font-size: 1.25em;
+
+      @include mq(md) {
+        width: 40%;
+      }
+
+      @include mq(lg) {
+        width: 30%;
+      }
+    }
+  }
+}

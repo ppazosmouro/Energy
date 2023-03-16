@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logo__img {
+    height: var(--header-height);
+    margin-right: .5rem;
+  }
+
+  .logo__text {
+    font-size: 2.5em;
+    font-family: var(--secondary-font);
+    font-weight: var(--fw-bold);
+    font-variant: italic;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    display: none;
+
+    @include mq(sm) {
+      display: block;
+    }
+
+    @include mq(1100px) {
+      font-size: 3.5em;
+    }
+  }
+
+  .logo__text--blue {
+    color: var(--third-color);
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,45 @@
+.l-grid {
+	@include grid-system;
+  grid-gap: var(--grid-gap);
+  grid-row-gap: 2rem;
+
+	@include mq(md) {
+		&-md {
+			@include grid-system;
+		}
+	}
+
+
+  @include mq(lg) {
+    &--big-gap-lg {
+      grid-gap: calc(var(--grid-gap) * 4);
+      grid-row-gap: calc(var(--grid-gap) * 2);
+    }
+  }
+
+  &--center {
+    align-items: center;
+  }
+}
+
+.l-col-centered {
+  align-self: center;
+}
+
+@include columns(l-col);
+
+@include mq(sm) {
+  @include columns(l-col-sm);
+}
+
+@include mq(md) {
+  @include columns(l-col-md);
+}
+
+@include mq(lg) {
+  @include columns(l-col-lg);
+}
+
+@include mq(xl) {
+  @include columns(l-col-xl);
+}

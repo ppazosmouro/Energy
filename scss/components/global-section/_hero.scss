@@ -1,0 +1,143 @@
+.hero {
+  min-height: calc(90vh - var(--header-height));
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+
+  @include background-image('&__img', $image-filter-transparent);
+
+  &::before {
+    content: '';
+    background-color: $image-filter-solid;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: var(--z-back);
+  }
+
+  &--page {
+    min-height: calc(60vh - var(--header-height));
+  }
+
+  &--page &__title {
+    font-size: 2.5em;
+    font-family: var(--secondary-font);
+    font-weight: var(--fw-bold);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: .25rem;
+      margin: 0 auto;
+      margin-top: .5rem;
+      background: var(--primary-color);
+    }
+  }
+
+  @media screen and (max-height: 768px) {
+    &__content,
+    &--page &__content {
+      padding-top: calc( var(--header-height) + 2rem );
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: var(--z-normal);
+    padding-top: var(--header-height);
+    padding-bottom: 2rem;
+  }
+
+  &__cta {
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include mq(sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    font-family: var(--secondary-font);
+    padding-top: var(--header-height);
+
+    @include mq(sm) {
+      font-size: 2.5em;
+    }
+
+    @include mq(md) {
+      font-size: 3.5em;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include mq(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    height: 5rem;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    @include mq(sm) {
+      margin-right: 3rem;
+    }
+  }
+}
+
+.hero--map {
+  padding: 0;
+  width: 100%;
+  min-height: calc(50vh - var(--header-height));
+
+  &__map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__map::before {
+    content: 'Loading map...';
+    font-size: 1.2em;
+    font-weight: var(--fw-medium);
+    color: var(--text-emphasis-medium);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 1rem);
+    background: #9fccee;
+  }
+
+  &__map > iframe {
+    width: 100%;
+    position: relative;
+    z-index: var(--z-tooltip);
+  }
+}

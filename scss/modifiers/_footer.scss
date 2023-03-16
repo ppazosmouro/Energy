@@ -1,0 +1,15 @@
+body.home .footer {
+  padding-top: 5rem;
+}
+
+body.page-template-page-about-us .footer {
+  padding-top: 7rem;
+}
+
+.footer .contact-item {
+  margin-right: 0;
+
+  @include mq(sm) {
+    margin-right: 1rem;
+  }
+}

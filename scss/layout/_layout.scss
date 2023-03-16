@@ -1,0 +1,207 @@
+$container-padding: 1rem;
+
+.container {
+  max-width: $max-width;
+  padding  : 0 $container-padding;
+  margin   : 0 auto;
+  display  : flex;
+  flex-wrap: wrap;
+}
+
+.generic-section {
+  $section-padding: 4rem;
+
+  padding: $section-padding 0;
+
+  &--top {
+    padding-top: $section-padding;
+  }
+
+  &--bottom {
+    padding-bottom: $section-padding;
+  }
+}
+
+.wt {
+  // Custom width
+  @for $i from 1 through 10 {
+    &-#{$i * 10} {
+      width: #{$i * 10%};
+    }
+  }
+
+  // Controlled custom width
+  &-auto {
+    --width: calc(100% - #{$container-padding});
+
+    @include mq(sm) {
+      --width: 75%;
+    }
+
+    @include mq(lg) {
+      --width: 50%;
+    }
+
+    width: var(--width);
+  }
+}
+
+@include mq(sm) {
+  .sm-wt {
+    // Custom width
+    @for $i from 1 through 10 {
+      &-#{$i * 10} {
+        width: #{$i * 10%};
+      }
+    }
+  }
+}
+
+@include mq(md) {
+  .md-wt {
+    // Custom width
+    @for $i from 1 through 10 {
+      &-#{$i * 10} {
+        width: #{$i * 10%};
+      }
+    }
+  }
+}
+
+@include mq(lg) {
+  .lg-wt {
+    // Custom width
+    @for $i from 1 through 10 {
+      &-#{$i * 10} {
+        width: #{$i * 10%};
+      }
+    }
+  }
+}
+
+@include mq(xl) {
+  .xl-wt {
+    // Custom width
+    @for $i from 1 through 10 {
+      &-#{$i * 10} {
+        width: #{$i * 10%};
+      }
+    }
+  }
+}
+
+/*
+    &#{t}-#{i} is equal to .mt-#{number} or mt-1
+    Next are the same, only changes margin direction (mb, mr, ml)
+*/
+.m {
+  @for $i from 1 through 8 {
+    &#{t}-#{$i} {
+      margin-top: px-rem($i * 8px);
+    }
+
+    &#{b}-#{$i} {
+      margin-bottom: px-rem($i * 8px);
+    }
+
+    &#{l}-#{$i} {
+      margin-left: px-rem($i * 8px);
+    }
+
+    &#{r}-#{$i} {
+      margin-right: px-rem($i * 8px);
+    }
+
+  }
+}
+
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+.mr-0 { margin-right: 0; }
+
+.center-block {
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.d-block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-around {
+    justify-content: space-around;
+  }
+
+  &-evenly {
+    justify-content: space-evenly;
+  }
+
+  &-items-center {
+    align-items: center;
+  }
+}
+
+.fixed {
+  position: fixed;
+}
+
+.z-back {
+  z-index: var(--z-back);
+}
+
+.z-normal {
+  z-index: var(--z-normal);
+}
+
+.z-tooltip {
+  z-index: var(--z-tooltip);
+}
+
+.z-fixed {
+  z-index: var(--z-fixed);
+}
+
+.z-modal {
+  z-index: var(--z-modal);
+}
+
+.full-height {
+  height: 100vh;
+}

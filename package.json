@@ -1,0 +1,24 @@
+{
+  "name": "renergy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass scss/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass scss/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joser-16/renergy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joser-16/renergy/issues"
+  },
+  "homepage": "https://github.com/joser-16/renergy#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

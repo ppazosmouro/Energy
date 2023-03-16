@@ -1,0 +1,55 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+  line-height: 1.1;
+  margin-right: 2rem;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--light {
+    color: #fff;
+  }
+
+  &__icon {
+    height: px-rem(24px);
+    margin-right: .5rem;
+    margin-top: .25rem;
+
+    &--small {
+      height: px-rem(18px);
+    }
+  }
+
+  &:hover &__icon {
+    animation-name: anim-contact-icons;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+
+  @keyframes anim-contact-icons {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(.25rem); }
+    100% { transform: translateY(0); }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: var(--fw-medium);
+    font-size: 1em;
+    color: var(--text-emphasis-medium);
+  }
+
+  &__strong {
+    margin: 0;
+    font-size: px-em(20px);
+    font-weight: var(--fw-bold);
+  }
+}

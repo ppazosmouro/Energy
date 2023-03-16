@@ -1,2 +1,2 @@
 # Energy
-Custom theme, adapted from a Figma design.
+Custom WordPress theme adapted from a Figma design.
